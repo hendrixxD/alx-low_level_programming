@@ -1,33 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * main - print the letters of the alphabet
- *
- * Description: print the letters of the alphabet in lower then in uppercase
+ * main - Prints the alphabet without q and e.
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i, j;
+	int i;
 
-	i = 97;
-	j = 65;
-
-	while (i < 123)
+	for (i = 97; i < 123; i++)
 	{
-		putchar(i);
-		i++;
+		if (i != 101 && i != 113)
+		{
+			putchar(i);
+		}
 	}
-
-	while (j < 91)
-	{
-		putchar(j);
-		j++;
-	}
-
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }

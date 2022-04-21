@@ -4,6 +4,8 @@
 /*
  * main - check the code 
  *
+ *reset_to_98: reset pointer
+ *
  * Return: Always 0.
 */
 int main(void)

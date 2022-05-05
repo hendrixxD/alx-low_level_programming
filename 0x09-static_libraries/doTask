@@ -1,0 +1,4 @@
+#!/bin/bash
+./copy
+gcc -c *.c
+ar -rc lubmy.a *.o

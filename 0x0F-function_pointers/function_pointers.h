@@ -2,7 +2,7 @@
 #define FUNC_POINTERS
 /*
  * File: function_pointers.h
- * Author: Yovo Koffi Vianney
+ * 
  */
 
 #include <stdio.h>

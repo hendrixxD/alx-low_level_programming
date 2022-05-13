@@ -1,20 +1,24 @@
+/*
+ * File: 1-init_dog.c
+ * Author: Yovo Koffi Vianney
+ */
 #include "function_pointers.h"
 
 /**
- * array_iterator - Executes a function given as a
- *                  parameter on each element of an array.
- * @array: The array.
- * @size: The size of array.
- * @action: A pointer to the function to be executed.
+ * int_index - searches for an integer
+ * @array: input array
+ * @size: size of array
+ * @cmp: comparison function
+ * Return: index of integer found in cmp
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	if (array == NULL || action == NULL)
-		return;
+	int i;
 
-	while (size-- > 0)
-	{
-		action(*array);
-		array++;
-	}
+	if (size > 0 && cmp && size && array)
+		for (i = 0; i <= size; i++)
+			if (cmp(array[i]))
+				return (i);
+	return (-1);
+
 }

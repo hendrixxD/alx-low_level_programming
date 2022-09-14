@@ -1,0 +1,8 @@
+all: school
+gcc = CC
+SRC = school.c main.c
+OBJ = ${SRC:%.c=%.o}
+NAME = school
+
+school: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
